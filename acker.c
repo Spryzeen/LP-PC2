@@ -18,7 +18,11 @@ int A(int m, int n) {
 
     printf("Llamada %d (m = %2d | n = %2d)\n", llamadas, m, n);
 
-    if (m == 1) {
+    if (m < 0 || n < 0) { // edge case
+        return 0;
+    }
+
+    if (m == 0) {
         return n + 1;
     }
 
